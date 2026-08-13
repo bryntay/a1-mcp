@@ -1,0 +1,25 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "gallery.a1/a1-gallery",
+  "title": "A1 Gallery",
+  "description": "Search a curated gallery of real website designs by style, font, colour, section and technology.",
+  "version": "1.1.0",
+  "websiteUrl": "https://www.a1.gallery/mcp",
+  "repository": {
+    "url": "https://github.com/bryntay/a1-mcp",
+    "source": "github"
+  },
+  "icons": [
+    {
+      "src": "https://www.a1.gallery/images/a1-favicon-192.png",
+      "mimeType": "image/png",
+      "sizes": ["192x192"]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://www.a1.gallery/api/mcp"
+    }
+  ]
+}
