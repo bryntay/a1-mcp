@@ -175,4 +175,4 @@ hosted at a1.gallery.
 ## Support
 
 Issues and questions: [open an issue](https://github.com/bryntay/a1-mcp/issues) or email
-hello@bryntaylor.co.uk.
+hello@a1.gallery.
