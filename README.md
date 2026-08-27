@@ -19,8 +19,8 @@ Every site is captured at full length, split into its interior pages and its ind
 sections, then measured. You get the type sizes, spacing, radius, container width and
 palette taken off the rendered page — not guessed from a picture.
 
-**Current corpus:** 1,145 sites · 3,211 captured sections · 2,813 full-page captures ·
-568 fonts · 510 designers and studios.
+**Current corpus:** 1,165 sites · 3,209 captured sections · 2,860 full-page captures ·
+571 fonts · 517 designers and studios.
 
 ## Endpoint
 
@@ -40,7 +40,20 @@ raises that to 2,000 a day with a higher per-minute allowance.
 Your client opens a browser to sign in the first time it connects. Per-client
 instructions with one-click install links are at [a1.gallery/mcp](https://www.a1.gallery/mcp).
 
-### Claude Code
+### Claude Code — plugin
+
+The plugin in this repository bundles the server with three skills, three slash commands
+and a research sub-agent. It teaches the agent how to use the corpus, which the bare
+connector does not.
+
+```bash
+claude plugin marketplace add bryntay/a1-mcp
+claude plugin install a1-gallery
+```
+
+Then run `/mcp` and authenticate. See [Plugin](#plugin) below for what it adds.
+
+### Claude Code — connector only
 
 ```bash
 claude mcp add --transport http a1 --scope user https://www.a1.gallery/api/mcp
@@ -153,6 +166,34 @@ All 17 tools are read-only and annotated `readOnlyHint: true`.
 | `get_creator` | One creator: bio, links, featured work. |
 
 Full descriptions, parameters and response shapes come back from `tools/list`.
+
+## Plugin
+
+Installing the connector gives an agent 17 tools. It does not tell the agent that
+`analyze_design_tokens` answers "how big should this be" better than five screenshots, or
+that a `lowSample` flag means stop generalising. The plugin carries that.
+
+### Skills
+
+| Skill | Fires when |
+|---|---|
+| `design-reference` | A design question needs evidence — type scale, spacing, palette, or what sites of a kind actually do. Routes to the aggregate tools first, examples second. |
+| `section-rebuild` | Recreating a hero, pricing table or FAQ. Builds from the measured `designTokens` rather than reading values off the screenshot. |
+| `setup` | First connection, or a `401 account_required`. Walks through OAuth and the quotas. |
+
+### Commands
+
+| Command | What it does |
+|---|---|
+| `/a1-gallery:reference` | Real sites matching a design brief, rephrased into the gallery's taxonomy. |
+| `/a1-gallery:tokens` | Measured values for a section type, reported as p25–p75 ranges. |
+| `/a1-gallery:pairings` | Sites using a font or a font pairing. |
+
+### Sub-agent
+
+`design-researcher` handles open briefs that need several searches — an aggregate pass,
+a couple of targeted searches, then the values to build with. It returns a brief and never
+edits files.
 
 ## Why aggregates use quartiles
 

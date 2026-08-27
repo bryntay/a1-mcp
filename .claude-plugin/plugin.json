@@ -1,0 +1,24 @@
+{
+  "name": "a1-gallery",
+  "displayName": "A1 Gallery",
+  "version": "1.0.0",
+  "description": "Ground design work in real websites — search 1,100+ live sites by style, font, colour and section, and read the type scale, spacing and palette measured off the page.",
+  "author": {
+    "name": "Bryn Taylor",
+    "email": "hello@a1.gallery",
+    "url": "https://www.a1.gallery"
+  },
+  "homepage": "https://www.a1.gallery/mcp",
+  "repository": "https://github.com/bryntay/a1-mcp",
+  "license": "MIT",
+  "keywords": [
+    "design",
+    "web-design",
+    "inspiration",
+    "typography",
+    "fonts",
+    "design-tokens",
+    "ui",
+    "reference"
+  ]
+}

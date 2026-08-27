@@ -1,0 +1,16 @@
+{
+  "name": "a1-gallery",
+  "description": "The A1 Gallery plugin — real website design reference, measured off the live page.",
+  "owner": {
+    "name": "Bryn Taylor",
+    "email": "hello@a1.gallery",
+    "url": "https://www.a1.gallery"
+  },
+  "plugins": [
+    {
+      "name": "a1-gallery",
+      "source": "./",
+      "description": "Ground design work in real websites — search 1,100+ live sites by style, font, colour and section, and read the type scale, spacing and palette measured off the page."
+    }
+  ]
+}
