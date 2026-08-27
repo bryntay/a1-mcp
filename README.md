@@ -19,7 +19,7 @@ Every site is captured at full length, split into its interior pages and its ind
 sections, then measured. You get the type sizes, spacing, radius, container width and
 palette taken off the rendered page — not guessed from a picture.
 
-**Current corpus:** 1,165 sites · 3,209 captured sections · 2,860 full-page captures ·
+**In the gallery right now:** 1,165 sites · 3,209 captured sections · 2,860 full-page captures ·
 571 fonts · 517 designers and studios.
 
 ## Endpoint
@@ -43,7 +43,7 @@ instructions with one-click install links are at [a1.gallery/mcp](https://www.a1
 ### Claude Code — plugin
 
 The plugin in this repository bundles the server with three skills, three slash commands
-and a research sub-agent. It teaches the agent how to use the corpus, which the bare
+and a research sub-agent. It teaches the agent how to use the gallery, which the bare
 connector does not.
 
 ```bash
@@ -119,7 +119,7 @@ codex mcp add a1 --url https://www.a1.gallery/api/mcp
 ## What you can ask for
 
 - *"Find three brutalist law firm sites and show me their heroes."*
-- *"What type scale do agency heroes actually use?"* — quartiles across the corpus, not one example.
+- *"What type scale do agency heroes actually use?"* — quartiles across every site, not one example.
 - *"Show me pricing pages that mention usage-based billing."* — full-text search inside the page copy.
 - *"What do portfolio FAQs say about refunds?"* — extracted Q&A pairs with frequencies.
 - *"Rebuild this pricing section."* — palette, type, spacing and radius as measured values.

@@ -24,7 +24,7 @@ Pick the tool by the shape of the question.
 ## Aggregates before examples
 
 For anything phrased as a norm — *how big*, *how much*, *what's typical* — start with
-`analyze_design_tokens` or `analyze_section_content`. They read the whole corpus. A
+`analyze_design_tokens` or `analyze_section_content`. They read every site captured. A
 handful of screenshots is not evidence of a norm, and picking three examples yourself
 invents one.
 

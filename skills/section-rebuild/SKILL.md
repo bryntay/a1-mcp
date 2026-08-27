@@ -37,10 +37,10 @@ reference does not fight the brand.
 ## One section is not a pattern
 
 If the user wants what is *normal* rather than one specific site, use
-`analyze_design_tokens` instead. It returns quartiles across the whole corpus. Copying one
+`analyze_design_tokens` instead. It returns quartiles across every site captured. Copying one
 site's 84px padding tells you what that site did, not what the range is.
 
-## Check against the corpus before shipping
+## Check against real sites before shipping
 
 After building, run `analyze_design_tokens` for the same section type and compare. A
 heading two quartiles off the median is worth a second look — sometimes deliberate, often
