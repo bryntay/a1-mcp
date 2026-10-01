@@ -20,5 +20,6 @@
     "design-tokens",
     "ui",
     "reference"
-  ]
+  ],
+  "logo": "assets/logo-400.png"
 }

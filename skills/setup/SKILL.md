@@ -32,7 +32,7 @@ expected response for an unauthenticated call, not a fault in the server.
 | A1 Pro | 60 | 2,000 |
 
 A daily-limit response arrives as a tool result, not an HTTP error, so read its text and
-pass the message on. Pro is at https://www.a1.gallery/pricing.
+pass the message on.
 
 ## Checking it works
 

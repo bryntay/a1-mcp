@@ -20,5 +20,7 @@
     "design-tokens",
     "ui",
     "reference"
-  ]
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./mcp.json"
 }
