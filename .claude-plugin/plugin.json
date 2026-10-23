@@ -1,8 +1,8 @@
 {
   "name": "a1-gallery",
   "displayName": "A1 Gallery",
-  "version": "1.1.1",
-  "description": "Ground design work in real websites — search 1,100+ live sites by style, font, colour and section, and read the type scale, spacing and palette measured off the page.",
+  "version": "1.1.2",
+  "description": "Ground design work in real websites — search 1,150+ hand-curated live sites by style, font, colour and section, and read the type scale, spacing and palette measured off the page.",
   "author": {
     "name": "Bryn Taylor",
     "email": "hello@a1.gallery",
@@ -13,14 +13,19 @@
   "license": "MIT",
   "icon": "./assets/icon-512.png",
   "privacyPolicyUrl": "https://www.a1.gallery/privacy",
+  "documentationUrl": "https://www.a1.gallery/mcp",
+  "supportUrl": "https://www.a1.gallery/mcp",
+  "termsOfServiceUrl": "https://www.a1.gallery/terms",
   "keywords": [
     "design",
     "web-design",
     "inspiration",
+    "design-reference",
     "typography",
     "fonts",
     "design-tokens",
     "ui",
-    "reference"
+    "landing-pages",
+    "website-examples"
   ]
 }

@@ -11,7 +11,7 @@
 
 ---
 
-A1 is a hand-picked gallery of real website designs. This MCP server puts it inside your
+A1 is a hand-curated gallery of real website designs. This MCP server puts it inside your
 coding agent, so you can ask for a reference and get structured JSON back instead of
 pasting screenshots and describing what you want.
 
@@ -45,6 +45,12 @@ instructions with one-click install links are at [a1.gallery/mcp](https://www.a1
 The plugin in this repository bundles the server with three skills, three slash commands
 and a research sub-agent. It teaches the agent how to use the gallery, which the bare
 connector does not.
+
+```bash
+/plugin install a1-gallery --marketplace bryntay/a1-mcp
+```
+
+On Claude Code before 2.1.275, add the marketplace first:
 
 ```bash
 claude plugin marketplace add bryntay/a1-mcp
