@@ -11,7 +11,7 @@ or run locally. No API key, no environment variables, no npm package.
 
 1. Add the server to the user's MCP config using the snippet for their client (below).
 2. Tell the user to complete the browser sign-in their client opens on first connect.
-3. Verify with a `tools/list` — you should see 17 tools, all read-only.
+3. Verify with a `tools/list` — you should see 21 tools: 19 read-only, plus `save_to_board` and `remove_from_board`, which change only the user’s own boards.
 
 ## Config by client
 

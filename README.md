@@ -30,7 +30,7 @@ palette taken off the rendered page — not guessed from a picture.
 | **Transport** | Streamable HTTP |
 | **Auth** | OAuth 2.1 with PKCE, dynamic client registration |
 | **Registry name** | `gallery.a1/a1-gallery` |
-| **Tools** | 17, all read-only |
+| **Tools** | 21 — 19 read-only, 2 that change your own boards |
 
 Access is free with an A1 account — 50 tool calls a day. [A1 Pro](https://www.a1.gallery/pricing)
 raises that to 2,000 a day with a higher per-minute allowance.
@@ -129,10 +129,11 @@ codex mcp add a1 --url https://www.a1.gallery/api/mcp
 - *"Show me pricing pages that mention usage-based billing."* — full-text search inside the page copy.
 - *"What do portfolio FAQs say about refunds?"* — extracted Q&A pairs with frequencies.
 - *"Rebuild this pricing section."* — palette, type, spacing and radius as measured values.
+- *"Save the three best ones to a board called Client X."* — goes straight to your A1 boards.
 
 ## Tools
 
-All 17 tools are read-only and annotated `readOnlyHint: true`.
+19 tools are read-only and annotated `readOnlyHint: true`. Two board tools, `save_to_board` and `remove_from_board`, change the signed-in person’s own boards and nothing else.
 
 ### Websites
 
@@ -171,11 +172,22 @@ All 17 tools are read-only and annotated `readOnlyHint: true`.
 | `browse_creators` | Designers and studios, filterable by category or style. |
 | `get_creator` | One creator: bio, links, featured work. |
 
+### Boards
+
+| Tool | What it does |
+|---|---|
+| `list_boards` | The signed-in person’s own A1 boards: name, item count, link, last change. |
+| `get_board` | The websites on one of their boards, newest first, paged. |
+| `save_to_board` | Saves websites by slug to one of their boards, found by id or name. A new name makes a new board. Free plan limits apply. |
+| `remove_from_board` | Removes websites from one board. They stay in the person’s saves and other boards. |
+
+List tools page with `offset`, and return `total`, `hasMore` and `nextOffset`.
+
 Full descriptions, parameters and response shapes come back from `tools/list`.
 
 ## Plugin
 
-Installing the connector gives an agent 17 tools. It does not tell the agent that
+Installing the connector gives an agent 21 tools. It does not tell the agent that
 `analyze_design_tokens` answers "how big should this be" better than five screenshots, or
 that a `lowSample` flag means stop generalising. The plugin carries that.
 
